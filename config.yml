@@ -1,0 +1,56 @@
+train_path: "data/sample/train.csv"
+test_path: "data/sample/abnormal.csv"
+output_path: "result/sample.csv"
+
+scaler: 'standard'
+
+# select dimensions used to train and test
+# dim:
+#    from: 1
+#    to: 7
+
+algorithms:
+  # LSTM:
+  #     epoch: 10
+  #     batch_size: 32
+  #     learning_rate: 0.01 
+  #     seq_len: 10
+
+  # GRU:
+  #     epoch: 10
+  #     batch_size: 32
+  #     learning_rate: 0.01 
+  #     seq_len: 10
+
+  # ISST:
+  #     dim_pos: 3
+
+  # AE:
+  #     epoch: 50
+  #     batch_size: 32
+  #     learning_rate: 0.01
+  #     seq_len: 10
+
+  # VAE:
+  #     epoch: 10
+  #     batch_size: 32
+  #     learning_rate: 0.01
+  #     seq_len: 10
+
+  MLSTM:
+      epoch: 10
+      batch_size: 32
+      learning_rate: 0.01
+      seq_len: 10
+      modal:
+        - 4 
+        - 3
+
+  MMAE:
+      epoch: 10
+      batch_size: 32
+      learning_rate: 0.01
+      seq_len: 15
+      modal:
+        - 4
+        - 3
